@@ -156,12 +156,6 @@
     </div>
 
   </div>
-  
-  {{#if siteSettings.enable_sidebar}}
-    <div class='sidebar'>
-      {{{siteSettings.sidebar_content}}}
-    </div>
-  {{/if}}
 {{else}}
   <div class="container">
     {{#conditional-loading-spinner condition=noErrorYet}}
