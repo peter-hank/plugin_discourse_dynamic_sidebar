@@ -57,7 +57,7 @@
     </div>
   {{/if}}
 
-  <div {{bind-attr class=":container :posts siteSettings.enable_sidebar:with-sidebar"}}">
+  <div {{bind-attr class=":container :posts siteSettings.enable_sidebar:with-sidebar"}}>
     {{view "selected-posts"}}
 
     <div class="row">
@@ -156,6 +156,12 @@
     </div>
 
   </div>
+  
+  {{#if siteSettings.enable_sidebar}}
+    <div class='sidebar'>
+      {{{siteSettings.sidebar_content}}}
+    </div>
+  {{/if}}
 {{else}}
   <div class="container">
     {{#conditional-loading-spinner condition=noErrorYet}}
